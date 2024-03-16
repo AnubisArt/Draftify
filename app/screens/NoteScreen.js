@@ -28,23 +28,11 @@ const reverseData = data => {
 };
 
 const NoteScreen = ({ user, navigation }) => {
-  const [greet, setGreet] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [resultNotFound, setResultNotFound] = useState(false);
 
   const { notes, setNotes, findNotes } = useNotes();
-
-  const findGreet = () => {
-    const hrs = new Date().getHours();
-    if (hrs === 0 || hrs < 12) return setGreet('Morning');
-    if (hrs === 1 || hrs < 17) return setGreet('Afternoon');
-    setGreet('Evening');
-  };
-
-  useEffect(() => {
-    findGreet();
-  }, []);
 
   const reverseNotes = reverseData(notes);
 
@@ -90,7 +78,7 @@ const NoteScreen = ({ user, navigation }) => {
       <StatusBar barStyle='dark-content' backgroundColor={colors.LIGHT} />
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.container}>
-          <Text style={styles.header}>{`Good ${greet} ${user.name}`}</Text>
+          <Text style={styles.header}>All Notes</Text>
           {notes.length ? (
             <SearchBar
               value={searchQuery}
@@ -152,6 +140,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     flex: 1,
     zIndex: 1,
+    backgroundColor: colors.LIGHT,
   },
   emptyHeader: {
     fontSize: 30,

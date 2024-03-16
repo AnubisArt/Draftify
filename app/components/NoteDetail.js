@@ -35,19 +35,19 @@ const NoteDetail = props => {
     setNotes(newNotes);
     await AsyncStorage.setItem('notes', JSON.stringify(newNotes));
     props.navigation.goBack();
-  };
+    };
 
   const displayDeleteAlert = () => {
     Alert.alert(
-      'Are You Sure!',
+      'Delete Note',
       'This action will delete your note permanently!',
       [
         {
           text: 'Delete',
-          onPress: deleteNote,
+          onPress: deleteNote,          
         },
         {
-          text: 'No Thanks',
+          text: 'cancel',
           onPress: () => console.log('no thanks'),
         },
       ],
@@ -140,6 +140,7 @@ const styles = StyleSheet.create({
     right: 15,
     bottom: 50,
   },
+  
 });
 
 export default NoteDetail;

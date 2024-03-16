@@ -3,7 +3,6 @@ import {
   View,
   StyleSheet,
   Modal,
-  Text,
   StatusBar,
   TextInput,
   TouchableWithoutFeedback,
@@ -54,8 +53,9 @@ const NoteInputModal = ({ visible, onClose, onSubmit, note, isEdit }) => {
 
   return (
     <>
-      <StatusBar hidden />
-      <Modal visible={visible} animationType='fade'>
+      <StatusBar />
+      <Modal style={{backgroundColor: colors.LIGHT,}}
+      visible={visible} animationType='fade'>
         <View style={styles.container}>
           <TextInput
             value={title}
@@ -86,7 +86,8 @@ const NoteInputModal = ({ visible, onClose, onSubmit, note, isEdit }) => {
             ) : null}
           </View>
         </View>
-        <TouchableWithoutFeedback onPress={handleModalClose}>
+        <TouchableWithoutFeedback
+        onPress={handleModalClose}>
           <View style={[styles.modalBG, StyleSheet.absoluteFillObject]} />
         </TouchableWithoutFeedback>
       </Modal>
@@ -98,6 +99,8 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 20,
     paddingTop: 15,
+    backgroundColor: colors.LIGHT,
+    
   },
   input: {
     borderBottomWidth: 2,
@@ -116,6 +119,8 @@ const styles = StyleSheet.create({
   modalBG: {
     flex: 1,
     zIndex: -1,
+    backgroundColor: colors.LIGHT,
+
   },
   btnContainer: {
     flexDirection: 'row',

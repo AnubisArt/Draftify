@@ -1,6 +1,8 @@
-export default {
-  DARK: '#1e1e1e',
-  LIGHT: '#FFF',
-  PRIMARY: '#dbb2ff',
-  ERROR: '#ff0000',
+export default{
+  DARK: '#121212',
+  LIGHT: '#eeeae2',
+  PRIMARY: '#333333',
+  DIM: '#D5D5D5',
+  ERROR: '#ED4337',
+  BGC:'#eeeae2',
 };

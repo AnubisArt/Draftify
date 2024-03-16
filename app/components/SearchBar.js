@@ -10,7 +10,7 @@ const SearchBar = ({ containerStyle, value, onClear, onChangeText }) => {
         value={value}
         onChangeText={onChangeText}
         style={styles.searchBar}
-        placeholder='Search here..'
+        placeholder='Search notes..'
       />
       {value ? (
         <AntDesign

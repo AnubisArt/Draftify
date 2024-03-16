@@ -1,30 +1,38 @@
 {
   "expo": {
-    "name": "ndp-note",
+    "name": "Draftify",
     "slug": "ndp-note",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon_note.png",
     "splash": {
-      "image": "./assets/ndp_splash.png",
+      "image": "./assets/splash_bg.png",
       "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon_note.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.anubisart.ndpnote"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0d2032a2-ef82-4315-b658-4036d97189b4"
+      }
     }
   }
 }
